@@ -1,7 +1,227 @@
+/* root */
+:root {
+  /* color */
+
+  --gradient-color: linear-gradient(
+    90deg,
+    hsl(136, 65%, 51%),
+    hsl(192, 70%, 51%)
+  );
+  --green-color: hsl(136, 65%, 51%);
+  --blue-color: hsl(192, 70%, 51%);
+
+  --dark-blue-color: hsl(233, 26%, 24%);
+  --gray-color: hsl(233, 8%, 62%);
+  --light-gray-color: hsl(220, 16%, 96%);
+  --very-light-gray-color: hsl(0, 0%, 98%);
+  --white-color: hsl(0, 0%, 100%);
+
+  /* margin, padding */
+  --space-mico: 7px;
+  --space-small: 15px;
+  --space-regular: 30px;
+  --space-large: 50px;
+  --space-xlarge: 100px;
+
+  /* border */
+  --border-radius: 7px;
+  --border-button: 50px;
+  --border-circle: 50%;
+
+  /* font */
+  --font-size-small: 0.8rem;
+  --font-size-nomal: 1.3rem;
+  --font-size-large: 2rem;
+  --font-size-xlarge: 3.5rem;
+
+  /* font-weight */
+  --font-weights-light: 300;
+  --font-weights-basic: 400;
+  --font-weights-bold: 700;
+}
+
+/* All tags */
+* {
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Public Sans", sans-serif;
+  cursor: default;
+  font-weight: var(--font-weights-light);
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+p {
+  color: var(--gray-color);
+  line-height: 1.5;
+}
+
+/* Section, Container */
+.section {
+  width: 100%;
+  height: auto;
+}
+.container {
+  width: 95%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* attribution */
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Header */
+#header {
+  z-index: 100;
+  position: relative;
+  background-color: white;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9vh;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-regular);
+  height: 9vh;
+  width: auto;
+}
+
+.menu__list {
+  height: 9vh;
+  width: auto;
+  display: flex;
+  border-bottom: 3px solid white;
+}
+.menu__list a {
+  height: 9vh;
+  line-height: 9vh;
+  width: auto;
+  color: var(--gray-color);
+  transition: border 0.3s ease, color 0.3s ease;
+}
+
+.menu__list a:hover {
+  border-bottom: 3px solid var(--green-color);
+  color: var(--dark-blue-color);
+}
+
+/* Request button */
+.login__button {
+  padding: 10px 20px;
+  background: var(--gradient-color);
+  border-radius: var(--border-button);
+  font-size: var(--font-size-small);
+  color: var(--white-color);
+  font-weight: var(--font-weights-bold);
+  transition: opacity 0.3s ease;
+}
+.login__button:hover {
+  opacity: 70%;
+}
+
+/* Main */
+#wrapper {
+  background-color: var(--very-light-gray-color);
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+/* intro container */
+#intro {
+  /* desktop intro image  */
+  background-image: url("images/bg-intro-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 145% 80%;
+  background-size: 70rem;
+}
+
+.intro-container {
+  /* background-color: bisque; */
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.intro__contnet {
+  width: 35vw;
+}
+.intro__content__title {
+  font-size: var(--font-size-xlarge);
+  font-weight: var(--font-weights-basic);
+  line-height: 3.7rem;
+}
+
+.intro__contnet p {
+  margin: var(--space-regular) 0;
+  line-height: 1.8rem;
+  font-size: var(--font-size-nomal);
+}
+
+.intro__image {
+  z-index: 2;
+}
+.mockup {
+  position: relative;
+  top: -0.8rem;
+  right: -15vw;
+  width: 45vw;
+}
+
+/* Easy */
+#easy {
+  background-color: var(--light-gray-color);
+  padding: var(--space-xlarge) 0;
+}
+.easy__head {
+  margin-bottom: var(--space-xlarge);
+}
+.easy__title {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weights-basic);
+}
+.easy__head p {
+  margin-top: var(--space-small);
+}
+
+/* ul */
+.easy__info {
+  display: flex;
+  gap: var(--space-regular);
+}
+.info__list__img img {
+  width: 65px;
+}
+.info__list__title {
+  font-size: var(--font-size-nomal);
+  font-weight: var(--font-weights-basic);
+  margin: var(--space-regular) 0;
+}
+.info__list p {
+  line-height: 1.6;
+}
+/*  */
+/*  */
+/* mobile */
+@media (max-width: 375px) {
 }
