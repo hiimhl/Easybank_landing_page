@@ -33,7 +33,7 @@
         <div class="header__logo">
           <img src="images/logo.svg" alt="logo" />
         </div>
-        <div class="header__menu">
+        <div class="header__menu disable">
           <ul class="menu">
             <li class="menu__list"><a href="#">Home</a></li>
             <li class="menu__list"><a href="#">About</a></li>
@@ -42,8 +42,12 @@
             <li class="menu__list"><a href="#">Careers</a></li>
           </ul>
         </div>
+        <div class="overlay hidden disable"></div>
         <div class="header__login">
-          <button class="login__button">Request Invite</button>
+          <button class="login__button disable">Request Invite</button>
+          <button class="menu-btn hidden">
+            <img src="images/icon-hamburger.svg" alt="menu" />
+          </button>
         </div>
       </div>
     </header>
