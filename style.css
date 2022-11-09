@@ -128,11 +128,6 @@ p {
   transition: border 0.3s ease, color 0.3s ease;
 }
 
-.menu__list a:hover {
-  border-bottom: 3px solid var(--green-color);
-  color: var(--dark-blue-color);
-}
-
 /* Request button */
 .login__button {
   padding: 10px 20px;
@@ -142,9 +137,6 @@ p {
   color: var(--white-color);
   font-weight: var(--font-weights-bold);
   transition: opacity 0.3s ease;
-}
-.login__button:hover {
-  opacity: 70%;
 }
 
 /* Main */
@@ -276,9 +268,7 @@ p {
   margin: var(--space-small) 0;
   transition: color 0.3s ease;
 }
-.paragraph__title:hover {
-  color: var(--green-color);
-}
+
 .articles__list__paragraph p {
   font-size: 1rem;
 }
@@ -311,10 +301,7 @@ p {
   cursor: pointer;
   transition: filter 0.3s ease;
 }
-.nav__icon:hover {
-  filter: invert(50%) sepia(17%) saturate(2041%) hue-rotate(82deg)
-    brightness(100%) contrast(78%);
-}
+
 .nav__menu {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -327,9 +314,7 @@ p {
   transition: color 0.3s ease;
   color: var(--white-color);
 }
-.nav__menu li a:hover {
-  color: var(--green-color);
-}
+
 .footer__info {
   direction: rtl;
 }
@@ -343,6 +328,46 @@ p {
 .hidden {
   display: none;
 }
+
+/* disable hover on mobile */
+@media (hover: hover) {
+  .menu__list a:hover {
+    border-bottom: 3px solid var(--green-color);
+    color: var(--dark-blue-color);
+  }
+  .login__button:hover {
+    opacity: 70%;
+  }
+  .paragraph__title:hover {
+    color: var(--green-color);
+  }
+  .nav__icon:hover {
+    filter: invert(50%) sepia(17%) saturate(2041%) hue-rotate(82deg)
+      brightness(100%) contrast(78%);
+  }
+  .nav__menu li a:hover {
+    color: var(--green-color);
+  }
+}
+@media (hover: none) {
+  .menu__list a:hover {
+    border-bottom: none;
+    /* color: var(--dark-blue-color); */
+  }
+  .login__button:hover {
+    opacity: 100%;
+  }
+  .paragraph__title:hover {
+    color: var(--dark-blue-color);
+  }
+  .nav__icon:hover {
+    filter: white;
+  }
+  .nav__menu li a:hover {
+    color: var(--white-color);
+  }
+}
+
 /* mobile */
 @media (max-width: 375px) {
   /* hidden, disable */
@@ -381,6 +406,17 @@ p {
     gap: var(--space-regular);
     align-items: center;
     height: 100%;
+  }
+  .menu-btn {
+    background-image: url("images/icon-hamburger.svg");
+    background-size: cover;
+    width: 20px;
+    height: 15px;
+  }
+  .close {
+    background-image: url("images/icon-close.svg");
+    background-size: cover;
+    background-position: center;
   }
   .menu__list {
     height: 20px;
