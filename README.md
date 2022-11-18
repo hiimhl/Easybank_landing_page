@@ -2,7 +2,7 @@
 
 ## 제작기간
 
-22.11.10 ~ 21.11.10
+22.11.07 ~ 21.11.09
 
 ## 사용 언어
 
@@ -10,18 +10,21 @@
 - CSS
 - JavaScript
 
-## 배포 사이트
+### 디자인 및 소스 참고
 
-https://hiimhl.github.io/Easybank_landing_page/
+[Frontend Mentor](https://www.frontendmentor.io/)
 
-## 프리뷰
+## Preview
 
+\*배포사이트 : https://hiimhl.github.io/Easybank_landing_page/  
+<br/>
 Desktop  
-<img src="images/desktop.png" width:700/>
+<img src="images/preview/easybank.png" width="100%"/>
+<img src="images/preview/easybank_2.png" width="100%"/>
+<br/>
+Mobile
 
-Mobile  
-<img src="images/mobile.png" height:700/>
-
-### 디자인 참고
-
-Frontend Mentor 챌린지
+<center>
+<img align='left' src="images/preview/easybank_m.png" width="47%"/>
+<img align='right' src="images/preview/easybank_m_a.png" width="47%"/>
+</center>
